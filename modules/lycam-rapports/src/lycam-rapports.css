@@ -1,0 +1,74 @@
+/* ORIENT 360 — Espace « LYCAM → Rapports statistiques ». Styles préfixés .lycam pour ne pas interférer avec l'application hôte. */
+.lycam { --bleu: #1f3864; --bleu-clair: #e8edf5; --bord: #d5dbe5; --texte: #1c2433; --gris: #6b7588; --rouge: #a8201a; --orange: #b06a00; --vert: #1f7a3d;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--texte); font-size: 14px; max-width: 1400px; margin: 0 auto; padding: 16px 20px 40px; }
+.lycam h1 { font-size: 22px; margin: 2px 0 16px; color: var(--bleu); letter-spacing: .2px; }
+.lycam h2 { font-size: 16px; margin: 0 0 4px; color: var(--bleu); }
+.lycam .fil { font-size: 12px; font-weight: 600; letter-spacing: .6px; color: var(--gris); }
+.lycam .bandeau-demo { background: #fff4d6; border: 1px solid #e8c766; color: #6b4b00; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-bottom: 12px; font-weight: 600; }
+.lycam .filtres { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; background: #fff; border: 1px solid var(--bord); border-radius: 8px; padding: 12px 14px; }
+.lycam .filtres .espace { flex: 1; }
+.lycam .champ { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--gris); font-weight: 600; }
+.lycam .champ select, .lycam .champ input { font: inherit; font-size: 14px; color: var(--texte); padding: 7px 9px; border: 1px solid var(--bord); border-radius: 6px; background: #fff; min-width: 150px; }
+.lycam .champ.court input { min-width: 0; width: 70px; }
+.lycam .case { display: flex; align-items: center; gap: 6px; font-size: 13px; padding-bottom: 8px; }
+.lycam .complet { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.lycam .btn { font: inherit; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 6px; border: 1px solid var(--bord); background: #fff; color: var(--texte); cursor: pointer; white-space: nowrap; }
+.lycam .btn:hover:not(:disabled) { background: var(--bleu-clair); }
+.lycam .btn:disabled { opacity: .5; cursor: not-allowed; }
+.lycam .btn.principal { background: var(--bleu); color: #fff; border-color: var(--bleu); padding: 10px 16px; }
+.lycam .btn.principal:hover:not(:disabled) { background: #16294a; }
+.lycam .btn.pdf { border-color: #d9a3a0; color: var(--rouge); }
+.lycam .btn.xls { border-color: #9fcdb0; color: var(--vert); }
+.lycam .btn.valider { background: var(--vert); color: #fff; border-color: var(--vert); }
+.lycam .btn.lien { border: none; background: none; color: var(--bleu); text-decoration: underline; padding: 4px 2px; font-weight: 500; }
+.lycam .validation { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--bord); background: #fafbfd; font-size: 13px; }
+.lycam .validation.valide { background: #eef8f1; border-color: #b7dfc4; }
+.lycam .validation.a_revalider { background: #fff6ec; border-color: #f0c99a; }
+.lycam .validation .detail { color: var(--gris); flex: 1; }
+.lycam .pastille { font-weight: 700; padding: 3px 10px; border-radius: 99px; background: #e3e7ee; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+.lycam .pastille.valide { background: var(--vert); color: #fff; }
+.lycam .pastille.a_revalider { background: var(--orange); color: #fff; }
+.lycam .bilan { color: var(--texte); text-decoration: none; }
+.lycam .bilan .rouge { color: var(--rouge); } .lycam .bilan .vert { color: var(--vert); }
+.lycam .onglets { display: flex; gap: 2px; border-bottom: 2px solid var(--bleu); overflow-x: auto; }
+.lycam .onglet { font: inherit; font-size: 13px; font-weight: 600; padding: 8px 14px 9px; border: 1px solid var(--bord); border-bottom: none; border-radius: 7px 7px 0 0; background: #f2f4f8; color: var(--gris); cursor: pointer; text-align: left; white-space: nowrap; position: relative; }
+.lycam .onglet small { display: block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; opacity: .8; }
+.lycam .onglet.actif { background: var(--bleu); color: #fff; border-color: var(--bleu); }
+.lycam .badge { background: var(--rouge); color: #fff; border-radius: 99px; font-size: 11px; padding: 1px 7px; margin-left: 6px; }
+.lycam .panneau { background: #fff; border: 1px solid var(--bord); border-top: none; border-radius: 0 0 8px 8px; padding: 16px; }
+.lycam .entete-panneau { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.lycam .entete-panneau .meta { color: var(--gris); font-size: 12.5px; }
+.lycam .entete-panneau .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.lycam .filtres-registre { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 10px; }
+.lycam .note { font-size: 12.5px; color: var(--gris); margin: 0 0 10px; }
+.lycam .alerte { padding: 9px 12px; border-radius: 6px; background: #f2f4f8; border: 1px solid var(--bord); margin: 10px 0; font-size: 13px; }
+.lycam .alerte.erreur { background: #fdeeee; border-color: #eab3b0; color: var(--rouge); }
+.lycam .alerte.ok { background: #eef8f1; border-color: #b7dfc4; color: var(--vert); }
+.lycam .chargement { color: var(--gris); padding: 20px 0; }
+.lycam .defile { overflow-x: auto; border: 1px solid var(--bord); border-radius: 6px; }
+.lycam table.tab { border-collapse: collapse; width: 100%; font-size: 13px; font-variant-numeric: tabular-nums; }
+.lycam .tab th { background: var(--bleu); color: #fff; font-weight: 600; padding: 6px 8px; border: 1px solid #3a5482; text-align: center; font-size: 12.5px; }
+.lycam .tab td { padding: 5px 8px; border: 1px solid #e1e5ec; text-align: center; }
+.lycam .tab tbody tr:nth-child(even) td { background: #f7f9fc; }
+.lycam .tab td.classe { text-align: left; font-weight: 600; white-space: nowrap; }
+.lycam .tab td.texte { text-align: left; }
+.lycam .tab td.manquant { background: repeating-linear-gradient(45deg, #fff, #fff 4px, #fbecec 4px, #fbecec 8px) !important; color: var(--gris); font-style: italic; }
+.lycam .tab td.na { background: #eef0f3 !important; }
+.lycam .tab tfoot td { background: var(--bleu-clair); font-weight: 700; border-top: 2px solid var(--bleu); }
+.lycam .tab td.aucun { color: var(--gris); padding: 20px; }
+.lycam .tab.t4 { font-size: 12px; }
+.lycam .tab.t4 td { padding: 4px 6px; white-space: nowrap; }
+.lycam .tab.t4 th { font-size: 11px; padding: 5px 4px; }
+.lycam .risque.r-ELEVE { color: var(--rouge); font-weight: 700; }
+.lycam .risque.r-MODERE { color: var(--orange); font-weight: 600; }
+.lycam .risque.r-AUCUN { color: var(--vert); }
+.lycam .risque.r-absent, .lycam .risque.r-nc { color: var(--gris); font-style: italic; }
+.lycam .tab.controles td.code { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; color: var(--gris); text-align: left; }
+.lycam .niv { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.lycam .niv.bloquant { background: #fbe0de; color: var(--rouge); }
+.lycam .niv.avertissement { background: #fdf0d9; color: var(--orange); }
+.lycam .niv.info { background: #e6ecf6; color: var(--bleu); }
+.lycam fieldset { border: 1px solid var(--bord); border-radius: 8px; padding: 12px 14px; margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+.lycam legend { font-weight: 700; color: var(--bleu); padding: 0 6px; }
+.lycam fieldset .note { width: 100%; margin: 0; }
+.lycam .grille-dim { display: flex; flex-wrap: wrap; gap: 10px; }

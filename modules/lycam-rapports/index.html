@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ORIENT 360 — LYCAM : Rapports statistiques</title>
+  <link rel="stylesheet" href="src/lycam-rapports.css">
+  <style>body { margin: 0; background: #f4f6fa; }</style>
+</head>
+<body>
+  <div id="lycam-rapports"></div>
+
+  <!-- Bibliothèques d'export embarquées (fonctionnent hors connexion) -->
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="vendor/jspdf.umd.min.js"></script>
+  <script src="vendor/jspdf.plugin.autotable.min.js"></script>
+  <!-- Module -->
+  <script src="src/lycam-core.js"></script>
+  <script src="src/lycam-exports.js"></script>
+  <script src="src/lycam-source.js"></script>
+  <script src="src/lycam-app.js"></script>
+  <script>
+    // Production : source REST branchée sur la base ORIENT 360.
+    // Prévisualisation : ajouter ?demo=1 à l'adresse (données fictives, signalées à l'écran).
+    var demo = /[?&]demo=1/.test(location.search);
+    window.lycam = LycamRapports.monter(document.getElementById('lycam-rapports'), {
+      source: demo ? new LycamSource.DemoSource()
+                   : new LycamSource.RestSource({ base: '/api/lycam-rapports', evenements: true })
+    });
+    // À appeler par ORIENT 360 après une modification ou une validation LYCAM :
+    //   window.lycam.actualiser();
+  </script>
+</body>
+</html>
